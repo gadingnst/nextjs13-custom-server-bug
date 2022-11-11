@@ -1,0 +1,13 @@
+process.env;
+
+export const {
+  NODE_ENV,
+  NEXT_PUBLIC_PASSPORT_API_BASEURL: PASSPORT_API_BASEURL,
+  NEXT_PUBLIC_SENTRY_DSN: SENTRY_DSN,
+  NEXT_PUBLIC_FBPQ_APP_ID: FBPQ_APP_ID,
+  NEXT_PUBLIC_GTM_CONTAINER_ID: GTM_CONTAINER_ID,
+  NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY: GOOGLE_RECAPTCHA_SITE_KEY
+} = process.env;
+
+export const IS_STAGING = PASSPORT_API_BASEURL?.includes('-stg') || false;
+export const ORAMI_URL = IS_STAGING ? 'https://stg.example.com' : 'https://example.com';
