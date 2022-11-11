@@ -8,3 +8,4 @@ Expected: Environment Variables doesn't `undefined`.
 
 Note: It still works when you downgrade to `NextJS 12.3.1`
 
+https://github.com/vercel/next.js/issues/42778
